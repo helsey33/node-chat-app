@@ -35,7 +35,7 @@ socket.on('disconnect', function () {
 });
 
 socket.on('updateUserList',function(users){
-    var ol = $('<ol></ol>');
+    var ol = $('<ul></ul>');
 
     users.forEach(function(user){
         ol.append($('<li></li>').text(user));
@@ -77,6 +77,7 @@ $('#message-form').on('submit',function(e){
     },function(){
         messageTextBox.val('');
     });
+
 });
 
 var locationButton = $('#send-location');
